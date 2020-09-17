@@ -18,9 +18,9 @@ def get_japanese_emoticon(file_path, emoticon)
   
   library = load_library(file_path)
 
-  symbol = library.keys.find { |key| library[key][:english] == emoticon }
+  emoticon = library.keys.find { |key| library[key][:english] == emoticon }
   
-  symbol ? library[emoticon][:japanese] : "Sorry, that emoticon was not found"
+  emoticon ? library[emoticon][:japanese] : "Sorry, that emoticon was not found"
   
 end
 
